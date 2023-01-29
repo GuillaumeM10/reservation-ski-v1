@@ -3,7 +3,6 @@ const { Schema } = mongoose;
 
 const postSchema = new Schema({
   title: String,
-  content: String,
   title: String,
   imageUrl: String,
   weight: Number,
@@ -16,9 +15,15 @@ const postSchema = new Schema({
     // `Date.now()` returns the current unix timestamp as a number
     default: Date.now
   },
-  isAvailable: Boolean
-  // comments: Comment,
-  // bookings: Booking
+  isAvailable: Boolean,
+  comments: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Comment"
+  }],
+  bookings: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Booking"
+  }]
 })
 
 module.exports = mongoose.model('Post', postSchema);
