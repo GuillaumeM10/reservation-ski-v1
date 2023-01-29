@@ -2,8 +2,14 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const bookingSchema = new Schema({
-  username: String,
-  telephoneNumber: String,
+  username: {
+    type: String,
+    required: true
+  },
+  telephoneNumber: {
+    type: String,
+    required: true
+  },
   date: {
     type: Date,
     default: Date.now
