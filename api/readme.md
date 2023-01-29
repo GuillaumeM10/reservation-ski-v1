@@ -2,8 +2,8 @@
 You can import the file "Reservation Ski.postman_collection.json" in Postman to test the API.
 
 # .ENV
-Like it's a local project, you can use the .env.example file to create your .env file.
-here is the .env data:
+Like it's a local project, you can use the .env.example file to create your .env file.\
+here is the .env data:\
 ```bash
 MONGO_INITDB_ROOT_USERNAME=mongoroot
 MONGO_INITDB_ROOT_PASSWORD=mongoroot
